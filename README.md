@@ -17,3 +17,18 @@ sms bomber pro v1 with Go (Golang)
 ## screen shot
 
 <img src="screen/IMG_20230815_002517_499.png">
+
+## Run in windows
+
+`Enter the Windows folder and run the sms.exe file`
+
+## Run in Linux/Termux
+
+- Linux : ```sudo apt install golang -y```
+
+- Termux : ```pkg install golang -y ```
+
+<h3>views :</h3>
+<br>
+<img src="https://profile-counter.glitch.me/esfelurm/iran-bomber/count.svg" alt="Visitors">
+ 
