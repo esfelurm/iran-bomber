@@ -21,9 +21,9 @@ sms bomber pro v1 with Go (Golang)
 
 ## Video test
 
-<video src="https://github.com/esfelurm/EsFeLuRm/blob/main/XiaoYing_Video_1692033120170_HD.mp4">
+<video srsrc="https://www.mp4.ir/Video?Watch=271347-309058022">
 
-
+ 
 ## Run in windows
 
 `Enter the Windows folder and run the sms.exe file`
