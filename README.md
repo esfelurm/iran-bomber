@@ -23,6 +23,14 @@ sms bomber pro irani 🇮🇷v1 with Go (Golang)
 
 <img src="screen/IMG_20230815_002517_499.png">
 
+## prerequisite :
+
+- Windows : Download Golang programming language from reputable sites
+
+- Linux : `sudo apt install golang`
+
+- Termux : `pkg install golang`
+
 ## Run in windows
 
 `Enter the Windows folder and run the sms.exe file`
