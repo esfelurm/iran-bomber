@@ -21,7 +21,7 @@ sms bomber pro v1 with Go (Golang)
 
 ## Video test
 
-<video> <source src="https://www.mp4.ir/Video?Watch=271347-309058022"></video>
+<video> test <source src="https://www.mp4.ir/Video?Watch=271347-309058022"></video>
 
 ## Run in windows
 
