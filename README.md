@@ -30,5 +30,5 @@ sms bomber pro v1 with Go (Golang)
 
 <h3>views :</h3>
 <br>
-<img src="https://profile-counter.glitch.me/esfelurm/iran-bomber/count.svg" alt="Visitors">
+<img src="https://profile-counter.glitch.me/esfelurm/count.svg" alt="Visitors">
  
