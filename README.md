@@ -24,10 +24,11 @@ sms bomber pro v1 with Go (Golang)
 
 ## Run in Linux/Termux
 
-- Linux : ```sudo apt install golang -y```
-
-- Termux : ```pkg install golang -y ```
-
+```
+git clone https://github.com/esfelurm/iran-bomber
+cd iran-bomber
+go run sms.go
+```
 <h3>views :</h3>
 <br>
 <img src="https://profile-counter.glitch.me/esfelurm/count.svg" alt="Visitors">
