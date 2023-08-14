@@ -18,11 +18,6 @@ sms bomber pro v1 with Go (Golang)
 
 <img src="screen/IMG_20230815_002517_499.png">
 
-
-## Video test
-
-<video> test <source src="https://www.mp4.ir/Video?Watch=271347-309058022"></video>
-
 ## Run in windows
 
 `Enter the Windows folder and run the sms.exe file`
